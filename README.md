@@ -1,5 +1,12 @@
 # AI Kubernetes Operations Platform
 
+## Overview
+
+A Kubernetes operations agent that works in three steps: read the cluster state it is given, form a hypothesis about the problem, and write a plan. The `POST /agent/run` endpoint returns that plan, and any `kubectl apply` is refused so a person makes the actual change. A versioned `/v1` ops API adds workspaces, tenant isolation, job approval and audit records.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local lab with tests; it does not call a hosted model and refuses production apply.
+
 <!-- project-guide:start -->
 ## Project guide
 
